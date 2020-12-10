@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>로그인</title>
+    <meta charset="utf-8">
+    <style>
+        #bg{
+            height:700px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .invisible{
+            clear: none;
+            border: 0px none;
+            float: none;
+            background-color: #ffffff;
+            width:100px;
+            height:50px;
+            fond-size:30;
+            border: 2px solid;
+        }
+
+    </style>
+</head>
+<body>
+<div id="bg" >
+    <form action="/login" method="post">
+        ID<br/>
+        <input type="text" id="id" name="id" size="15" style="border: 2px solid; width:200px; height:30px;"><br/><br/>
+        Password<br/>
+        <input type="password" id="pw" name="pw" size="15" style="border: 2px solid;width:200px; height:30px;"><br/><br/>
+        <center>
+            <button type="submit" class="invisible" style="width:100px; height:30px;">로그인</button>
+        </center>
+    </form>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>마스외전</title>
+    <meta charset="utf-8">
+    <style>
+    #btn{
+        margin-top: 30px;
+    }
+    table {
+        border-collapse: collapse;
+        counter-reset:group;
+    }
+    th {
+        padding:10px;
+        background: #ebebeb;
+        border-top: 2px solid #5b8fe3;
+        border-right: 2px solid #b9babd;
+        border-left: 2px solid #b9babd;
+        border-bottom: 2px solid #b9babd;
+    }
+    td {
+        padding:10px;
+        border-top: 2px solid #5b8fe3;
+        border-right: 2px solid #b9babd;
+        border-left: 2px solid #b9babd;
+        border-bottom: 2px solid #b9babd;
+    }
+    tbody{
+	    counter-increment:group;
+	    counter-reset:row;
+	}
+	tbody tr{
+	    counter-increment:row;
+	}
+	tbody td:first-child:before{
+        content:counter(row);
+    }
+    td, th{
+	    font-family:sans-serif;
+	    text-align:left;
+	    padding:2px 5px;
+	}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 align="center" style="font-size:40px">프로젝트 리스트</h1>
+        <table  align="center">
+            <th width="5%">No.</th>
+            <th width="10%">프로젝트 종류</th>
+            <th width="10%">프로젝트 명</th>
+            <th width="10%">참여인원</th>
+            <th width="10%">역할</th>
+            <th width="10%">기간</th>
+            <tbody>
+            <tr th:each="list: ${list}">
+                <td></td>
+                <td th:text="${list.name}"></td>
+                <td th:text="${list.type}"></td>
+                <td th:text="${list.num}"></td>
+                <td th:text="${list.part}"></td>
+                <td th:text="${list.introduce}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="btn" align="right" >
+        <form action="/list/register">
+        <button type="submit" style="background:black; color:#ffffff;
+            font-size: 20px; " padding="10px" >프로젝트 등록하기</button>
+        </form>
+    </div>
+</body>
+</html>

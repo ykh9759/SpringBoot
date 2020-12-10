@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>홈</title>
+    <meta charset="utf-8">
+    <style>
+        .a{
+           padding-left:150px;
+           padding-right:150px;
+           border-style: solid;
+           border-width: 2px;
+           border-color: #b9babd;
+        }
+        #bg{
+            height:500px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+    </style>
+</head>
+<body>
+    <div id="bg">
+        <form>
+            <img th:src="@{image/my.png}" class="a" width="300" height="350"></br>
+            <center>
+                <b style="font-size:20px; color:#b9babd">안녕하세요 마스외전 2기 염경훈입니다.</b>
+            </center>
+        </form>
+    </div>
+</body>
+</html>
